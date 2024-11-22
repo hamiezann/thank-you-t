@@ -1,0 +1,68 @@
+
+@media screen and (max-width: 768px) {
+  .welcome-container {
+    padding: 1.5rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+
+/* src/styles/App.css */
+body {
+  font-family: "Playfair Display", serif;
+  margin: 0;
+  background: linear-gradient(to bottom, #ffedd5, #ff7f50);
+  color: #2c2c2c;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff7043;
+  transform: scale(1.05);
+}
+/* .song-player {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  background: #ffe4b5;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+} */
+
+.play-pause-button {
+  background: #ff7043;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.play-pause-button:hover {
+  background-color: #ff5722;
+}

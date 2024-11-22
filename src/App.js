@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Welcome from "./components/Welcome";
+import QualitiesList from "./components/QualityList";
+import ThankYouNote from "./components/ThankYou";
+import Footer from "./components/Footer";
+import "./styles/App.css";
+import SongPlayer from "./components/Song";
 
 function App() {
+  const [currentSection, setCurrentSection] = useState(0);
+
+  const nextSection = () => setCurrentSection((prev) => prev + 1);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {currentSection === 0 && <Welcome onNext={nextSection} />}
+      {currentSection === 1 && <QualitiesList />}
+      {currentSection === 2 && <ThankYouNote />}
+      {/* < SongPlayer /> */}
+      <Footer />
     </div>
   );
 }

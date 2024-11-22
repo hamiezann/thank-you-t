@@ -1,0 +1,96 @@
+/* General Layout for all devices */
+.qualities-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: linear-gradient(to bottom, #fff8e1, #ffe4b5);
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  /* Button Styles */
+  .quality-button {
+    background: #ffe4b5;
+    color: #2c2c2c;
+    border: 2px solid #ff6f61;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .quality-button.revealed {
+    background: #ffedd5;
+    color: #8b4513;
+    font-weight: bold;
+  }
+  
+  .quality-button:hover {
+    background: #ff7043;
+    color: white;
+  }
+  
+  /* Final Message */
+  .final-message {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    color: #8b4513;
+    font-weight: bold;
+  }
+  
+  /* Media Queries for iPhones */
+  
+  /* iPhone Mini (5.4" screen) */
+  @media screen and (max-width: 375px) {
+    .qualities-list {
+      gap: 1rem;
+      padding: 1.5rem;
+    }
+  
+    .quality-button {
+      font-size: 1rem;
+      padding: 10px 12px;
+    }
+  
+    .final-message {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* iPhone 12/14 Regular (6.1" screen) */
+  @media screen and (min-width: 376px) and (max-width: 390px) {
+    .qualities-list {
+      max-width: 350px;
+    }
+  
+    .quality-button {
+      font-size: 1.1rem;
+      padding: 12px 14px;
+    }
+  
+    .final-message {
+      font-size: 1.3rem;
+    }
+  }
+  
+  /* iPhone 12/14 Pro Max (6.7" screen) */
+  @media screen and (min-width: 391px) {
+    .qualities-list {
+      max-width: 400px;
+    }
+  
+    .quality-button {
+      font-size: 1.2rem;
+      padding: 14px 16px;
+    }
+  
+    .final-message {
+      font-size: 1.4rem;
+    }
+  }
+  
